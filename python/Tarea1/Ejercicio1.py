@@ -1,0 +1,11 @@
+# Calcula manualmente el resultado de la expresión. Comprueba el valor obtenido en la consola de Python
+print ("a)" , 2 + 3 + 1 + 2)
+print ("b)" , 2 + 3 * 1 + 2)
+print ("c)" , (2 + 3) * 1 + 2)
+print ("d)" , (2 + 3) * (1 + 2))
+print ("e)" , +---6)
+print ("f)" , -+-+6)
+print ("g)" , -1 + 3 / 2)
+print ("h)" , -1 + 3 // 2)
+print ("i)" , 0xf + 0o17 + 0b1111 + 15)
+print ("j)" , 0xffff + 0b1)
