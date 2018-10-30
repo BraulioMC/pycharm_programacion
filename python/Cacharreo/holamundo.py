@@ -2,4 +2,8 @@
 
 # Segundo python
 
-print("Hola mundo!")
+# print("Hola mundo!")
+
+s = "hola"
+
+s.upper()
