@@ -25,7 +25,7 @@ print("d)" , len(cadena.split()))
 
 print("e)" , cadena.title())
 
-#   f) Extrae la subcadena "cadena de ejemplo" y guardala en una variable
+#   f) Extrae la subcadena "cadena de ejemplo" y guardala en una variable llamada cola
 '''
  Buscamos la posicion de la palabra cadena y mostramos la segunda parte
  Es como hacer un 'cut -d f1' en bash
@@ -36,5 +36,15 @@ print("f)" ,
       "  La posicion de la palabra es: " ,
       cadena.find("cadena")
 )
+
+cola = cadena[cadena.find("cadena"):]
+
+#   g) Reemplaza en cola "ejemplo" por "muestra""
+
+print("g)" , cola.replace("ejemplo" , "muestra" , 1))
+
+
+
+
 
 
