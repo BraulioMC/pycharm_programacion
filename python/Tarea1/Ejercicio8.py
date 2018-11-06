@@ -43,7 +43,16 @@ cola = cadena[cadena.find("cadena"):]
 
 print("g)" , cola.replace("ejemplo" , "muestra" , 1))
 
+#   h) Extrae la subcadena "Esto es un ejemplo de una" y guárdala en una variable llamada principio
 
+principio = cadena[:cadena.find("cadena")]
+print("h)" , principio)
+
+#   i) Crea una variable frase que sea el resultado de concatenar principio y cola e imprimela
+
+frase = principio + cola
+
+print("i)" , frase)
 
 
 
