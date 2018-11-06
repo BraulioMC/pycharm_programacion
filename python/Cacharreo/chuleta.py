@@ -32,3 +32,7 @@ print(
 print("La suma de {0} mas {1} menos {2} es {3}".format(1,3,5,(1+3-5)))
 
 print("Una prueba de splitter".split())
+
+cadena = "esto es un texto de cadena para una prueba"
+print("La palabra cadena esta en posicion" , cadena.find("cadena"))
+
