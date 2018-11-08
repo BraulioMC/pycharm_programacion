@@ -5,15 +5,17 @@
     cha según el ejemplo de ejecución
 '''
 
-lado_1 = int(input("Introduce uno de los lados: "))
-lado_2 = int(input("Introduce el otro lado: "))
+lado_1 = float(input("Introduce uno de los lados: "))
+lado_2 = float(input("Introduce el otro lado: "))
 
-perimetro = lado_1 * 2 + lado_2 * 2
-area = lado_1 * lado_2
+perimetro = float(lado_1 * 2 + lado_2 * 2)
+area = float(lado_1 * lado_2)
+
+
 
 print()
 
-print("=" * 33)
-print("{0:<26}{1:>7}".format("Perímetro del rectángulo: " , perimetro))
-print("{0:<26}{1:>7}".format("Área del rectángulo: ", area))
-print("=" * 33)
+print("=" * 36)
+print("{0:<26}{1:>10}".format("Perímetro del rectángulo: " , perimetro))
+print("{0:<26}{1:>10}".format("Área del rectángulo: ", area))
+print("=" * 36)
