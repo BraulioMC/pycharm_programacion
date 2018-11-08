@@ -11,8 +11,8 @@ horas = int(input("Número de horas: "))
 minutos = int(input("Número de minutos: "))
 segundos = int(input("Número de segundos: "))
 
-tdias = dias*24*24*60
-thoras = horas*24*60
+tdias = dias*24*60*60
+thoras = horas*60*60
 tminutos = minutos*60
 total = tdias + thoras + tminutos + segundos
 
