@@ -22,25 +22,46 @@
 
 while True:
     try:
-        coef_a = int(input("Introduce coeficiente a que no sea cero: "))
+        coef_a = float(input("Introduce coeficiente a que no sea cero: "))
         while coef_a == 0:
             print("No puede ser cero")
-            int(input("Introduce entero distinto de 0: "))
+            float(input("Introduce entero distinto de 0: "))
         break
     except (ValueError):
         print("No es un numero entero")
 
 while True:
     try:
-        coef_b = int(input("Introduce coeficiente b: "))
+        coef_b = float(input("Introduce coeficiente b: "))
         break
     except (ValueError):
         print("No es un numero entero")
 
 while True:
     try:
-        coef_c = int(input("Introduce coeficiente c: "))
+        coef_c = float(input("Introduce coeficiente c: "))
         break
     except (ValueError):
         print("No es un numero entero")
+
+
+#   Cerebro del ejercicio
+
+
+from math import sqrt
+
+if coef_a != 0:
+    x_1 = (- coef_b + sqrt(coef_b ** 2 - 4 * coef_a * coef_c)) / (2 * coef_a)
+    x_2 = (- coef_b - sqrt(coef_b ** 2 - 4 * coef_a * coef_c)) / (2 * coef_a)
+    print('Soluciones de la ecuacion: x1=%4.2f y x2=%4.2f ' % (x_1, x_2))
+else:
+    if coef_b != 0:
+        x_3 = -coef_c / coef_b
+        print('Solucion de la ecuacion: x=%4.2f ' % x_3)
+    else:
+        if coef_c != 0:
+            print('La ecuacion no tiene solucion. ')
+        else:
+            print('La ecuacion tiene infinitas soluciones. ')
+
 
