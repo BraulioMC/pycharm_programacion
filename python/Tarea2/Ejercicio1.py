@@ -9,7 +9,7 @@
 num1 = float(input("Introduce número 1: "))
 num2 = float(input("Introduce número 2: "))
 
-if num1%num2 == 0 or num2%num1 == 0:
+if num1%num2 == 0:
     print(str(num1) + " es múltiplo de " + str(num2))
 else:
     print(str(num1) + " no es múltiplo de " + str(num2))
