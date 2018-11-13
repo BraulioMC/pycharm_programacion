@@ -20,13 +20,11 @@ while not str.isdigit(num3):
     num3 = input("Que sea un numero: ")
 
 
-if num1 > num2:
-    if num1 > num3:
-        print("El mayor es: " + num1)
-    else:
-        print("El mayor es: " + num3)
-else:
-    if num2 > num3:
-        print("El mayor es: " + num2)
-    else:
-        print("El mayor es: " + num3)
+mayor = num1
+
+if num2 > mayor:
+    mayor = num2
+elif num3 > mayor:
+    mayor = num3
+
+print("El mayor es: " + mayor)
