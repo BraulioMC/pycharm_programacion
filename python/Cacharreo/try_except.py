@@ -14,3 +14,20 @@ try:
         print(num, "es impar")
 except ValueError:
     print("Valor no válido")
+
+#   Este tipo de control será de la siguiente forma:
+'''
+try:
+    acciones que pueden generar un error
+except tipo_de_error_1:
+    acciones a ejecutar si se produce tipo_de_error_1
+except tipo_de_error_2:
+    acciones a ejecutar si se produce tipo_de_error_2
+. . .
+except :
+    acciones a ejecutar si se produce un error no contemplado
+else:
+    acciones a ejecutar si no se produce ningún error
+finally:
+    acciones a ejecutar siempre (con o sin error)
+'''
