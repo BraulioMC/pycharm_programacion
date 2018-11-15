@@ -27,4 +27,4 @@ elif dif_4 < dif_5:
 else:
     menor = str(n5) + ", quinto número "
 
-print("El número más cercano es el " + str(menor))
+print("El número más cercano a " + str(ref) + " es el " + str(menor))
