@@ -46,8 +46,6 @@ while True:
 
 
 #   Cerebro del ejercicio
-
-
 from math import sqrt
 
 if coef_a != 0:

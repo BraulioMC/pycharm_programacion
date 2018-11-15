@@ -13,11 +13,13 @@ n4 = int(input("Introduce cuarto número: "))
 n5 = int(input("E introduce el quinto: "))
 menor = 0
 
+# Valores absolutos
 dif_2 = abs(ref - n2)
 dif_3 = abs(ref - n3)
 dif_4 = abs(ref - n4)
 dif_5 = abs(ref - n5)
 
+# Busco el menor de todos
 if dif_2 < dif_3:
     menor = str(n2) + ", segundo número"
 elif dif_3 < dif_4:
