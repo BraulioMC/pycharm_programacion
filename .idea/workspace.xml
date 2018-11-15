@@ -23,14 +23,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="58" />
-          <entry key="py" value="14423" />
+          <entry key="py" value="14814" />
           <entry key="txt" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="100" />
-          <entry key="Python" value="14423" />
+          <entry key="Python" value="14814" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -42,24 +42,33 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="documentacion" value="1" />
-          <entry key="py" value="88" />
+          <entry key="py" value="89" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="88" />
+          <entry key="Python" value="89" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python/Tarea2/Flujos/Ejercicio2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+            <state relative-caret-position="400">
+              <caret line="29" column="49" lean-forward="true" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/python/Tarea2/Flujos/Ejercicio3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -114,10 +123,11 @@
         <option value="$PROJECT_DIR$/python/Tarea2/Flujos/Ejercicio1.py" />
         <option value="$PROJECT_DIR$/python/Cacharreo/salida_formateada.py" />
         <option value="$PROJECT_DIR$/python/Tarea2/Flujos/Ejercicio2.py" />
+        <option value="$PROJECT_DIR$/python/Tarea2/Flujos/Ejercicio3.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -196,7 +206,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Ejercicio2">
+  <component name="RunManager" selected="Python.Ejercicio3">
     <configuration name="Ejercicio1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pycharm_programacion" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -281,7 +291,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="probas" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Ejercicio3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pycharm_programacion" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -289,11 +299,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/Cacharreo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/Tarea2/Flujos" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/Cacharreo/probas.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/Tarea2/Flujos/Ejercicio3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -303,19 +313,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.probas" />
       <item itemvalue="Python.Ejercicio1" />
       <item itemvalue="Python.Ejercicio2" />
       <item itemvalue="Python.Ejercicio11" />
       <item itemvalue="Python.Ejercicio10" />
+      <item itemvalue="Python.Ejercicio3" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Ejercicio3" />
         <item itemvalue="Python.Ejercicio2" />
         <item itemvalue="Python.Ejercicio10" />
         <item itemvalue="Python.Ejercicio11" />
         <item itemvalue="Python.Ejercicio1" />
-        <item itemvalue="Python.probas" />
       </list>
     </recent_temporary>
   </component>
@@ -577,8 +587,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/python/Tarea2/Flujos/Ejercicio2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        <state relative-caret-position="400">
+          <caret line="29" column="49" lean-forward="true" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/Tarea2/Flujos/Ejercicio3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
         </state>
       </provider>
     </entry>
