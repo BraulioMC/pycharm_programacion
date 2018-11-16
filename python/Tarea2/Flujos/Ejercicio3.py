@@ -43,4 +43,4 @@ while True:
         else:
             print("\nEl numero %s NO es primo" % numero)
     except:
-        print("\nEl numero tiene que ser entero")
+        print("\nEl numero tiene que ser entero o no contener letras")
