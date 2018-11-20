@@ -1,6 +1,2 @@
-import sys
-
-try:
-    pads
-except:
-    sys.exit("Algo pasou ahi")
+normalText = 'Python is interesting!'
+print(ascii(normalText))
