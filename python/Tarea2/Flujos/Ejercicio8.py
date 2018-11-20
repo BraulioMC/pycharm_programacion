@@ -20,16 +20,22 @@
 '''
 
 
-#print(ord("A"))
-# print(chr(65))
-'''
-binario = ord("a")
-print(int(binario))
-print(bin(binario))
-'''
+texto = "Hola que tal estamos 64564"
+minusculas = "abcdefghijklmnñopqrstuvwxyz"
+mayusculas = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+salida = ""
 
-print(bin(ord("a")))
+for i in texto:
+    pos = (len(bin(ord(i))) - 6)
+    binario = bin(ord(i))
+    tmp = (binario[pos])
 
-#variable = bin(ord("a"))
+    if i in minusculas or i in mayusculas:
+        if tmp == str(0):
+            salida = salida + (chr(ord(i) + 32))
+        else:
+            salida = salida + (chr(ord(i) - 32))
+    else:
+        salida = salida + i
 
-print(bin(ord("a")) + bin(32))
+print(salida)
