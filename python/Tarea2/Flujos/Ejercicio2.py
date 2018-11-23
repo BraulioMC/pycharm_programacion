@@ -26,11 +26,12 @@ print("{}{:^25}{}".format("*", "TABLA DE MULTIPLICAR", "*"))
 print("*" * 27, "\n")
 
 for i in range(11):
-    print("-" * 27)
-    print("{:^27}".format("TABLA DEL " + str(i)))
-    print("-" * 27)
+    print("+", "-" * 25, "+")
+    print("{}{:^27}{}".format("|", "TABLA DEL " + str(i), "|"))
+    print("+", "-" * 25, "+")
 
     for j in range(11):
         cociente = (i * j)
-        print("{:^27}".format(str(i) + " x " + str(j) + " = " + str(cociente)))
+        print("{}{:^27}{}".format("|", str(i) + " x " + str(j) + " = " + str(cociente), "|"))
+    print("+", "-" * 25, "+")
     print("\n")
