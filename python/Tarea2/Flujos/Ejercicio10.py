@@ -35,7 +35,7 @@
 texto = ""
 
 while True:
-    print("Introduce texto a cifrar: ")
+    print("Introduce texto a cifrar (#FIN# para salir): ")
     texto = texto + input("> ")
     if texto.find("#FIN#") < 0:
         pass
