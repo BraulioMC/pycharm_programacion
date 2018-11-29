@@ -1,0 +1,18 @@
+DEBUG:root:Mensaje debugeado
+ERROR:root:Mensaje de error
+Level 35:root:Nivel de log inventado
+2018-11-29 18:42:55,933 DEBUG Mensaje debugeado)
+2018-11-29 18:42:55,934 ERROR Mensaje de error)
+2018-11-29 18:42:55,935 Level 35 Nivel de log inventado)
+2018-11-29 18:46:23,801 DEBUG Mensaje debugeado)
+2018-11-29 18:46:23,802 ERROR Mensaje de error)
+2018-11-29 18:46:23,802 Level 35 Nivel de log inventado)
+2018-11-29 18:47:36,863 DEBUG Mensaje debugeado)
+2018-11-29 18:47:36,864 ERROR Mensaje de error)
+2018-11-29 18:47:36,865 Level 35 Nivel de log inventado)
+2018-11-29 18:47:49,689 DEBUG Mensaje debugeado)
+2018-11-29 18:47:49,690 ERROR Mensaje de error)
+2018-11-29 18:47:49,690 Level 35 Nivel de log inventado)
+2018-11-29 18:47:53,434 DEBUG Mensaje debugeado)
+2018-11-29 18:47:53,435 ERROR Mensaje de error)
+2018-11-29 18:47:53,436 Level 35 Nivel de log inventado)
