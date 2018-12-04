@@ -23,11 +23,11 @@ try:
         try:
             print("========== EL FIGURILLAS ==========")
             print("Vamos a dibujar figuras ( CTRL-C para terminar )")
-            selecion = int(input("Escoge el tipo (1 - Cuadrado, 2 - Triángulo): "))
-            altura = int(input("Cuál es la altura: "))
+            selecion = int(input("Escoge el tipo (1 - Cuadrado, 2 - Triangulo): "))
+            altura = int(input("Cual es la altura: "))
             relleno = input("Y el relleno: ")
         except ValueError:
-            print("Debe ser un número")
+            print("Debe ser un numero")
             exit()
 
         try:
