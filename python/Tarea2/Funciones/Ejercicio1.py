@@ -20,13 +20,15 @@ def calcula_letra_DNI(numero):
     dni = letra[resto]
     return dni
 
-# Número de DNI
-numero = int(input("Introduce número de DNI de 8 dígitos: "))
+try:
+    # Número de DNI
+    numero = int(input("Introduce número de DNI de 8 dígitos: "))
 
-
-if len(str(numero)) != 8:
-    print("Tiene que ser de 8 dígitos")
-else:
-    print("Calculando...")
-    dni = calcula_letra_DNI(numero)
-    print(str(numero )+ str(dni))
+    if len(str(numero)) != 8:
+        print("Tiene que ser de 8 dígitos")
+    else:
+        print("Calculando...")
+        dni = calcula_letra_DNI(numero)
+        print(str(numero )+ str(dni))
+except ValueError:
+    print("Introduce 8 números enteros")
