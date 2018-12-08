@@ -15,6 +15,13 @@
 '''
 
 def calcula_letra_DNI(numero):
+    '''Calcula letra del DNI.
+
+    Args:
+        numero (int): numero de 8 digitos.
+    Returns:
+        dni (str): string de un digito. Letra del DNI.
+    '''
     resto = int((numero % 23))
     letra = "trwagmyfpdxbnjzsqvhlcke"
     dni = letra[resto]

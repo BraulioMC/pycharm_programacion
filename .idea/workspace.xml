@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f9d393f0-3b93-463f-b3b8-0b1dc5ebcc86" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/Tarea2/Funciones/Ejercicio1.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/Tarea2/Funciones/Ejercicio1.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,10 +14,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/python/Tarea2/Funciones/Ejercicio2.py">
+        <entry file="file://$PROJECT_DIR$/python/Tarea2/Funciones/Ejercicio1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-306">
-              <caret line="9" column="50" lean-forward="true" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+            <state relative-caret-position="280">
+              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -84,9 +85,9 @@
         <option value="$PROJECT_DIR$/python/Tarea2/Graficos/graficasPython.py" />
         <option value="$PROJECT_DIR$/python/Tarea2/Flujos/Ejercicio7.py" />
         <option value="$PROJECT_DIR$/python/Tarea2/Condiciones/Ejercicio7.py" />
-        <option value="$PROJECT_DIR$/python/Tarea2/Funciones/Ejercicio1.py" />
-        <option value="$PROJECT_DIR$/python/Tarea2/Funciones/Ejercicio2.py" />
         <option value="$PROJECT_DIR$/python/Cacharreo/holamundo.py" />
+        <option value="$PROJECT_DIR$/python/Tarea2/Funciones/Ejercicio2.py" />
+        <option value="$PROJECT_DIR$/python/Tarea2/Funciones/Ejercicio1.py" />
       </list>
     </option>
   </component>
@@ -135,12 +136,6 @@
               <item name="pycharm_programacion" type="b2602c69:ProjectViewProjectNode" />
               <item name="pycharm_programacion" type="462c0819:PsiDirectoryNode" />
               <item name="python" type="462c0819:PsiDirectoryNode" />
-              <item name="Cacharreo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pycharm_programacion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pycharm_programacion" type="462c0819:PsiDirectoryNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
               <item name="Tarea2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -156,6 +151,13 @@
               <item name="python" type="462c0819:PsiDirectoryNode" />
               <item name="Tarea2" type="462c0819:PsiDirectoryNode" />
               <item name="Funciones" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pycharm_programacion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pycharm_programacion" type="462c0819:PsiDirectoryNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="Tarea2" type="462c0819:PsiDirectoryNode" />
+              <item name="Graficos" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -388,19 +390,26 @@
       <option name="project" value="LOCAL" />
       <updated>1543950092929</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Ejercicio2 funciones - Dibujando figuras (funcional)">
+      <created>1543950298006</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1543950298006</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1860817" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18910742" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39770868" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2700491" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -658,13 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/Tarea2/Funciones/Ejercicio1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="24" column="65" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python/Tarea1/Ejercicio11.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -756,8 +758,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/python/Tarea2/Funciones/Ejercicio2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <caret line="9" column="50" lean-forward="true" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+        <state relative-caret-position="241">
+          <caret line="43" column="11" lean-forward="true" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/Tarea2/Funciones/Ejercicio1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
         </state>
       </provider>
     </entry>
