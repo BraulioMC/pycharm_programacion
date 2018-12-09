@@ -9,4 +9,25 @@ def menu():
     print("*" * 22)
     return ""
 
+def cesar(texto, clave):
+    '''Cifrado cesar'''
+
+    crypto_msg = ""
+    texto = texto.upper()
+    for i in texto:
+        if i >= "A" and i <= "Z":
+            crypto_ascii = ord(i) + clave
+
+            if crypto_ascii < ord("A"):
+                crypto_ascii += 26
+            elif crypto_ascii > ord("Z"):
+                crypto_ascii -= 26
+
+            crypto_msg += chr(crypto_ascii)
+        else:
+            crypto_msg += i
+    return crypto_msg
+
 print(menu())
+
+opcion_menu =
