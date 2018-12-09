@@ -12,10 +12,10 @@ def es_par(numero):
     '''
 
     if int(numero) % 2 == 0:
-        print("El valor " + numero + " es un número par")
+        print("El valor " + str(numero) + " es un número par")
         return True
     else:
-        print("El valor " + numero + " no es un número par")
+        print("El valor " + str(numero) + " no es un número par")
         return False
 
 
@@ -33,4 +33,4 @@ def fibo():
 
 if __name__ == "__main__":
     import sys
-    es_par(int(sys.argv[1]))
+    es_par(int(sys.argv[]))
