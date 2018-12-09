@@ -35,6 +35,7 @@ opcion_menu = input("Selecciona opcion: ")
 opcion_menu = opcion_menu.upper()
 
 if opcion_menu == "C":
+
     texto = input("Introduce texto a cifrar: ")
 
     try:
@@ -43,7 +44,9 @@ if opcion_menu == "C":
         exit(0)
 
     print(cesar(texto, clave))
+
 elif opcion_menu == "D":
+
     texto = input("Introduce texto a descifrar: ")
 
     try:
