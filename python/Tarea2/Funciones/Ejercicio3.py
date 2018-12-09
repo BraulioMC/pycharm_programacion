@@ -30,4 +30,27 @@ def cesar(texto, clave):
 
 print(menu())
 
-opcion_menu =
+opcion_menu = input("Selecciona opcion: ")
+
+opcion_menu = opcion_menu.upper()
+
+if opcion_menu == "C":
+    texto = input("Introduce texto a cifrar: ")
+
+    try:
+        clave = int(input("Codigo CESAR: "))
+    except (KeyboardInterrupt):
+        exit(0)
+
+    print(cesar(texto, clave))
+elif opcion_menu == "D":
+    texto = input("Introduce texto a descifrar: ")
+
+    try:
+        clave = int(input("Codigo CESAR: "))
+    except (KeyboardInterrupt):
+        exit(0)
+
+elif opcion_menu == "S":
+    exit()
+
