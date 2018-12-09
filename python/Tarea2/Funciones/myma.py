@@ -9,6 +9,16 @@ def es_par(numero):
         numero (int): numero entero para determinar
     Returns:
         (bool): True or False
+    Error:
+        (str): Devuelve E si hubo un error
+    >>> es_par(13)
+    False
+
+    >>> es_par(4)
+    True
+
+    >>> es_par("par")
+    E
     '''
 
     if int(numero) % 2 == 0:
@@ -30,10 +40,13 @@ def fibo():
     '''Calcula serie Fibonacci'''
 
 if __name__ == "__main__":
-    import sys
-    salida = es_par(int(sys.argv[1]))
+    try:
+        import sys
+        salida = es_par(int(sys.argv[1]))
 
-    if salida:
-        print("Es par")
-    else:
-        print("Es impar")
+        if salida:
+            print("Es par")
+        else:
+            print("Es impar")
+    except:
+        print("E")
