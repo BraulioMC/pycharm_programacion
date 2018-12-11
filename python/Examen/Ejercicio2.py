@@ -1,4 +1,4 @@
-num = "1234567,876868"
+num = "-1234,56147876868"
 
 def separar_millar(num):
     largo_total = len(num)
@@ -8,24 +8,46 @@ def separar_millar(num):
         punto = punto - 3
     return num
 
-def salida_comun(num, decimal):
+def salida_comun(num, decimal, resto):
+    num = num[:decimal]
+    num = (separar_millar(num))
+    return (num + "," + str(resto))
 
-
-if num.find(".") != -1:
+def num_punto(num):
     decimal = num.find(".")
     resto = num[decimal + 1:]
-    num = num[:decimal]
-    num = (separar_millar(num))
-    print(num + "," + str(resto))
+    return resto, decimal
 
-elif num.find(",") != -1:
+def num_coma(num):
     decimal = num.find(",")
-    resto = num[decimal:]
-    num = num[:decimal]
-    num = (separar_millar(num))
-    print(num + str(resto))
+    resto = num[decimal + 1:]
+    return resto, decimal
+
+
+
+
+
+if num.find("-") != -1:
+    if num.find(".") != -1:
+        resto, decimal = num_punto(num)
+        print(salida_comun(num, decimal, resto))
+
+    elif num.find(",") != -1:
+        resto, decimal = num_coma(num)
+        print(salida_comun(num, decimal, resto))
+
+    else:
+        num = num[1:]
+        print(separar_millar(num))
+
 else:
-    separar_millar(num)
+    if num.find(".") != -1:
+        resto, decimal = num_punto(num)
+        print(salida_comun(num, decimal, resto))
 
+    elif num.find(",") != -1:
+        resto, decimal = num_coma(num)
+        print(salida_comun(num, decimal, resto))
 
-
+    else:
+        print(separar_millar(num))
