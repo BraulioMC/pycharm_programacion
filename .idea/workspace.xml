@@ -165,7 +165,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -291,10 +291,10 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Ejercicio_Ejemplo" />
-      <item itemvalue="Python.graficasPython" />
       <item itemvalue="Python.Ejercicio1 (1)" />
       <item itemvalue="Python.Ejercicio2" />
+      <item itemvalue="Python.Ejercicio_Ejemplo" />
+      <item itemvalue="Python.graficasPython" />
       <item itemvalue="Python.holamundo" />
     </list>
     <recent_temporary>
