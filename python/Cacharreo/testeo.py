@@ -22,3 +22,6 @@ logging.error("Mensaje de error")
 logging.log(35, "Nivel de log inventado")
 '''
 
+numero = int("-" + str(int(1)))
+
+print(numero)
