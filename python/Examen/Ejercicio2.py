@@ -44,8 +44,6 @@ def num_coma(num):
     resto = num[decimal + 1:]
     return resto, decimal
 
-
-
 def procesar_num(num):
     '''
     Funcion general para procesar el numero introducido por el usuario.
