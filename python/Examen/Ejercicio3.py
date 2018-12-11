@@ -1,3 +1,4 @@
+'''
 print("#### CALCULATOR 2000 ####")
 
 count = 0.0
@@ -17,3 +18,4 @@ while True:
         elif count = coun
     except KeyboardInterrupt:
         print("Have a great day!!!")
+'''
