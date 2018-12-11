@@ -1,4 +1,4 @@
-num = "-1234,56147876868"
+num = "-123.56147876868"
 
 def separar_millar(num):
     largo_total = len(num)
@@ -28,17 +28,17 @@ def num_coma(num):
 
 
 if num.find("-") != -1:
+    num = num[1:]
     if num.find(".") != -1:
         resto, decimal = num_punto(num)
-        print(salida_comun(num, decimal, resto))
+        print("-" + salida_comun(num, decimal, resto))
 
     elif num.find(",") != -1:
         resto, decimal = num_coma(num)
-        print(salida_comun(num, decimal, resto))
+        print("-" + salida_comun(num, decimal, resto))
 
     else:
-        num = num[1:]
-        print(separar_millar(num))
+        print("1" + separar_millar(num))
 
 else:
     if num.find(".") != -1:
