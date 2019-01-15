@@ -13,3 +13,10 @@ Parámetro                       Resultado
 "hooooooolaaaaa"                ('h', 'o', 'l', 'a')
 '''
 
+# Creamos set para añadir elementos unicos, PRG_U2.05 pag 28/36
+
+def remove_dup(arg1):
+    set = {}
+
+    set.add
+
