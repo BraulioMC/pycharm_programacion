@@ -16,14 +16,33 @@ Parámetro                       Resultado
 # Creamos set para añadir elementos unicos, PRG_U2.05 pag 28/36
 
 # Variables
-param1 = []
-param2 = (1, 2, 3)
-param3 = (1, 2, 3, 2, 1)
-param4 = [1, (1, 2), 3, (1, 2), 4, 3]
-param5 = "hooooooolaaaaa"
+# param1 = []
+# param2 = (1, 2, 3)
+# param3 = (1, 2, 3, 2, 1)
+# param4 = [1, (1, 2), 3, (1, 2), 4, 3]
+# param5 = "hooooooolaaaaa"
 
 # Funcion
 def remove_dup(arg):
+    """Devuelve una tupla con lo que le pases.
+
+        Args:
+            arg (tuple, list): Tupla o lista con elementos posiblemente repetidos
+        Returns:
+            (tuple): Tupla con los elementos sin repetir
+
+        Ejemplos:
+            >>> remove_dup([])
+            ()
+            >>> remove_dup((1, 2, 3))
+            (1, 2, 3)
+            >>> remove_dup((1, 2, 3, 2, 1))
+            (1, 2, 3)
+            >>> remove_dup([1, (1, 2), 3, (1, 2), 4, 3])
+            (1, (1, 2), 3, 4)
+            >>> remove_dup("hooooooolaaaaa")
+            ('h', 'o', 'l', 'a')
+        """
     tmp = list()
 
     for i in arg:
@@ -35,8 +54,11 @@ def remove_dup(arg):
 
     return salida
 
-print("Parametro 1 ->", remove_dup(param1))
-print("Parametro 2 ->", remove_dup(param2))
-print("Parametro 3 ->", remove_dup(param3))
-print("Parametro 4 ->", remove_dup(param4))
-print("Parametro 5 ->", remove_dup(param5))
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod(verbose=True)
+    # print("Parametro1 ->", remove_dup(param1))
+    # print("Parametro2 ->", remove_dup(param2))
+    # print("Parametro3 ->", remove_dup(param3))
+    # print("Parametro4 ->", remove_dup(param4))
+    # print("Parametro5 ->", remove_dup(param5))
