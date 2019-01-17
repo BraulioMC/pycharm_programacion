@@ -67,6 +67,7 @@ def remove_dup(arg):
 
     return salida
 
+
 def elimina_tildes_tup(arg):
     '''
     Le pasamos una frase y devolvera lo mismo sin tilde ni dierisis en u
@@ -87,20 +88,11 @@ def elimina_tildes_tup(arg):
     salida = arg
     for i in arg:
         if i in tilde:
-            if i == (tilde[0]):
-                salida = salida.replace(i, vocales[0])
-            elif i == (tilde[1]):
-                salida = salida.replace(i, vocales[1])
-            elif i == (tilde[2]):
-                salida = salida.replace(i, vocales[2])
-            elif i == (tilde[3]):
-                salida = salida.replace(i, vocales[3])
-            elif i == (tilde[4]):
-                salida = salida.replace(i, vocales[4])
-            elif i == (tilde[5]):
-                salida = salida.replace(i, vocales[5])
+            pos = tilde.index(i)
+            salida = salida.replace(i, vocales[pos])
 
     return str(salida)
+
 
 def elimina_tildes(arg):
     '''
