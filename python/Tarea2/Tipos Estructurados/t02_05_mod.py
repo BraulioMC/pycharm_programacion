@@ -13,13 +13,17 @@ Parámetro                       Resultado
 [1, (1, 2), 3, (1, 2), 4, 3]    (1, (1, 2), 3, 4)
 "hooooooolaaaaa"                ('h', 'o', 'l', 'a')
 
------------------------------------------------------------------------------------
-
 2.
 Añade al módulo una función denominada elimina_tildes_tup que, empleando tuplas ,
 devuelva el texto recibido tras sustituir cada vocal con tilde, además de la la ü con
 diéresis, por su correspondiente sin signo diacrítico.
 Añade al docstring los correspondientes ejemplos de uso
+
+3.
+Añade al módulo una función denominada elimina_tildes que, empleando un único
+diccionario , devuelva el texto recibido tras sustituir cada vocal con tilde, además de
+la la ü con diéresis, por su correspondiente sin signo diacrítico.
+Añade al docstring los correspondientes ejemplos de uso.
 '''
 
 # Creamos set para añadir elementos unicos, PRG_U2.05 pag 28/36
@@ -97,6 +101,31 @@ def elimina_tildes_tup(arg):
                 salida = salida.replace(i, vocales[5])
 
     return str(salida)
+
+def elimina_tildes(arg):
+    '''
+    Retora un string substituyendo vocales con tilde por vocales sin ella
+    :param arg: string como una frase
+    :return: mismo string sin tildes
+
+    Ejemplos
+        >>> elimina_tildes("Hola que tal")
+        'Hola que tal'
+        >>> elimina_tildes("Qué tal?")
+        'Que tal?'
+        >>> elimina_tildes("áéíóúü")
+        'aeiouu'
+
+    '''
+
+    dic = {"á":"a", "é":"e", "í":"i", "ó":"o", "ú":"u", "ü":"u"}
+    salida = arg
+
+    for i in arg:
+        if (i in dic) == True:
+            salida = salida.replace(i, dic[i])
+    return salida
+
 
 if __name__ == "__main__":
     import doctest
