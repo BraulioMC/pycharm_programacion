@@ -21,16 +21,20 @@ momento
 ha sido inicializada previamente
 '''
 
-def crear_matriz(colum, files):
+import os
+
+def crea_lista(filas, columna):
     lista = []
-    celdas = colum*files
+    celdas = columna*filas
+    for i in range(0, celdas):
+        lista.append(0.0)
+    return lista
+
+def crear_matriz(colum, files, lista):
     files += 1
     count = 0
     var = True
     varCount = 0
-
-    for i in range(0, celdas):
-        lista.append(0.0)
 
     while (count < files):
         if var:
@@ -48,18 +52,52 @@ def crear_matriz(colum, files):
 
         print(("-"*5) + ("-"*5)*colum + "-"*5)
         count += 1
-    return ""
+    return lista
 
+def modificar_matriz(fila, columna, lista, valor, numColum):
+    if (fila == 0):
+        lista[columna] = valor
+    else:
+        numLista_mod = (fila * numColum) + columna
+        lista[numLista_mod] = valor
+    return lista
 
+while True:
+    print('''
+        ######## M A T R I X ########
+            I: Iniciar Matriz
+            M: Mostrar matriz
+            C: Cambiar valor
+            S: Salir
+    ''')
+    select = input("> Opcion: ")
 
-varFiles = int(input("Numero de filas: "))
-varColum = int(input("Numero de columnas: "))
+    if (select == "I" or select == "i"):
+        varFiles = int(input("Numero de filas: "))
+        varColum = int(input("Numero de columnas: "))
+        os.system('cls' if os.name == 'nt' else 'clear')
+        lista = crea_lista(varFiles, varColum)
 
-print(crear_matriz(varFiles,varColum))
+        crear_matriz(varFiles, varColum, lista)
+    elif (select == "M" or select == "m"):
+        try:
+            os.system('cls' if os.name == 'nt' else 'clear')
+            crear_matriz(varFiles, varColum, lista)
+        except NameError:
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print("La matriz no esta inicializada")
 
-print("Cambiemos un valor")
-files = int(input("Numero fila: "))
-colum = int(input("Numero columna: "))
+    elif (select == "C" or select == "c"):
+        varFiles_mod = int(input("Numero fila: "))
+        varColum_mod = int(input("Numero columna: "))
+        varValor_mod = float(input("Nuevo valor: "))
 
-
+        os.system('cls' if os.name == 'nt' else 'clear')
+        lista = (modificar_matriz(varFiles_mod, varColum_mod, lista, varValor_mod, varColum))
+        crear_matriz(varFiles, varColum, lista)
+    elif (select == "S" or select == "s"):
+        break
+    else:
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("Elige un valor válido")
 
