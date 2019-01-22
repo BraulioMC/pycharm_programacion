@@ -62,42 +62,56 @@ def modificar_matriz(fila, columna, lista, valor, numColum):
         lista[numLista_mod] = valor
     return lista
 
+
+
 while True:
     print('''
-        ######## M A T R I X ########
-            I: Iniciar Matriz
-            M: Mostrar matriz
-            C: Cambiar valor
-            S: Salir
+######## M A T R I X ########
+ I: Iniciar Matriz
+ M: Mostrar matriz
+ C: Cambiar valor
+ S: Salir
     ''')
     select = input("> Opcion: ")
 
     if (select == "I" or select == "i"):
-        varFiles = int(input("Numero de filas: "))
-        varColum = int(input("Numero de columnas: "))
+        varFiles = int(input("Numero de filas [0-99]: "))
+        varColum = int(input("Numero de columnas[0-99]: "))
         os.system('cls' if os.name == 'nt' else 'clear')
+        print("\n")
         lista = crea_lista(varFiles, varColum)
 
         crear_matriz(varFiles, varColum, lista)
+
+
     elif (select == "M" or select == "m"):
         try:
             os.system('cls' if os.name == 'nt' else 'clear')
+            print("\n")
             crear_matriz(varFiles, varColum, lista)
         except NameError:
             os.system('cls' if os.name == 'nt' else 'clear')
+            print("\n")
             print("La matriz no esta inicializada")
 
+
     elif (select == "C" or select == "c"):
-        varFiles_mod = int(input("Numero fila: "))
-        varColum_mod = int(input("Numero columna: "))
-        varValor_mod = float(input("Nuevo valor: "))
+        varFiles_mod = int(input("Numero fila [0-" + str(varFiles - 1) + "]: "))
+        varColum_mod = int(input("Numero columna [0-" + str(varColum - 1) + "]: "))
+        varValor_mod = input("Nuevo valor: ")
 
         os.system('cls' if os.name == 'nt' else 'clear')
+        print("\n")
         lista = (modificar_matriz(varFiles_mod, varColum_mod, lista, varValor_mod, varColum))
         crear_matriz(varFiles, varColum, lista)
+
+
     elif (select == "S" or select == "s"):
         break
+
+
     else:
         os.system('cls' if os.name == 'nt' else 'clear')
+        print("\n")
         print("Elige un valor válido")
 
