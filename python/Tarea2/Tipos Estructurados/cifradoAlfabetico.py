@@ -28,40 +28,41 @@ función elimina_tildes del módulo mod_u05
 ● Antes de cifrar/descifrar debes comprobar que se ha inicializado la tabla de cifrado
 según la clave proporcionada
 '''
-import time
 
-var_klave_dic = {}
-var_klave_list = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
-                  "U", "V", "W", "X", "Y", "Z"]
+def tablero_klave(var_klave):
+    var_klave_dic = {}
+    var_klave_list = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S",
+                      "T", "U", "V", "W", "X", "Y", "Z"]
 
-var_klave = "ZAFIRO"
-var_klave_list_len = len(var_klave_list)
-var_klave_len = len(var_klave)
-var_set_klave = set(var_klave)
+    var_klave_list_len = len(var_klave_list)
+    var_klave_len = len(var_klave)
+    var_set_klave = set(var_klave)
 
-for i in range (0, var_klave_len):
-    key = var_klave_list[i]
-    tmp = var_klave[i]
-    var_klave_dic.update({key:tmp})
+    for i in range(0, var_klave_len):
+        key = var_klave_list[i]
+        tmp = var_klave[i]
+        var_klave_dic.update({key:tmp})
 
-var_klave_set = set(var_klave_list)
+    var_klave_set = set(var_klave_list)
 
-for i in var_klave:
-    var_klave_set.discard(i)
+    for i in var_klave:
+        var_klave_set.discard(i)
 
-var_lista = list(var_klave_set)
-var_lista = ''.join((sorted(var_lista)))
-count = 0
+    var_lista = list(var_klave_set)
+    var_lista = ''.join((sorted(var_lista)))
+    count = 0
 
-for i in range(var_klave_len, var_klave_list_len):
-    key = var_klave_list[i]
-    valor = var_lista[count]
-    var_klave_dic.update({key:valor})
-    count += 1
+    for i in range(var_klave_len, var_klave_list_len):
+        key = var_klave_list[i]
+        valor = var_lista[count]
+        var_klave_dic.update({key:valor})
+        count += 1
 
+    return var_klave_dic
 
+klave = input("Introduce klave: ")
 
+var_klave_dic = tablero_klave(klave)
 
 print(var_klave_dic)
 
-time.sleep(2)
