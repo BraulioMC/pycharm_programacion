@@ -30,14 +30,12 @@ según la clave proporcionada
 '''
 import time
 
-# var_klave_dic = {"A":"", "B":"", "C":"", "D":"", "E":"", "F":"", "G":"", "H":"", "I":"", "J":"", "K":"", "L":"", "M":"",
-        # "N":"", "Ñ":"", "O":"", "P":"", "Q":"", "R":"", "S":"", "T":"", "U":"", "V":"", "W":"", "X":"", "Z":""}
-
 var_klave_dic = {}
 var_klave_list = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
                   "U", "V", "W", "X", "Y", "Z"]
 
 var_klave = "ZAFIRO"
+var_klave_list_len = len(var_klave_list)
 var_klave_len = len(var_klave)
 var_set_klave = set(var_klave)
 
@@ -46,9 +44,22 @@ for i in range (0, var_klave_len):
     tmp = var_klave[i]
     var_klave_dic.update({key:tmp})
 
-for i in range(var_klave_len, var_klave_list):
+var_klave_set = set(var_klave_list)
+
+for i in var_klave:
+    var_klave_set.discard(i)
+
+var_lista = list(var_klave_set)
+var_lista = ''.join((sorted(var_lista)))
+count = 0
+
+for i in range(var_klave_len, var_klave_list_len):
     key = var_klave_list[i]
-    # hacer un set con las letras que restan de ZAFIRO, y ordenarlos de menor a menor, usar esa lista para meter al dic
+    valor = var_lista[count]
+    var_klave_dic.update({key:valor})
+    count += 1
+
+
 
 
 print(var_klave_dic)
