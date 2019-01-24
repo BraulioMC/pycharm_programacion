@@ -105,18 +105,60 @@ def procesa_frase(frase_cifrar):
     mensaje_cifrado = cifrar_mensaje(frase_cifrar)
     return mensaje_cifrado
 
-# PARTE 1 - GENERAMOS EL DICCIONARIO CON LA KLAVE PARA CIFRAR
+def pintar_menu():
+    print(
+        '######## C I P H E R ########',
+        'C: Cifrar',
+        'D: Descifrar',
+        'K: Establecer Clave',
+        'M: Mostrar Clave',
+        'S: Salir', 
+        sep='\n'
+    )
+    opcion = input("\n> OPCION: ")
+    opcion = elimina_tildes(opcion)
+    opcion = opcion.upper()
+    print("Dentro del menu tengo:", opcion)
+    return opcion
+
+# PARTE 1 - MENU
+count = 0
+os.system('cls||clear')
+opcion = pintar_menu()
+
+#################################### REVISAR AQUI
+while (count < 2):
+    if (opcion != "C" or opcion != "D" or opcion != "K" or opcion != "M" or opcion != "S"):
+        print("La opcion introducida no es valida")
+        opcion = pintar_menu()
+        count += 1
+    elif (opcion == "C"):
+        print("Cifrar")
+    elif (opcion == "D"):
+        print("Descifrar")
+    elif (opcion == "K"):
+        print("Establecer clave")
+    elif (opcion == "M"):
+        print("Mostrar clave")
+    elif (opcion == "S"):
+        print("Salir")
+        sys.exit()
+else:
+    os.system('cls||clear')
+    sys.exit()
+
+# PARTE 2 - GENERAMOS EL DICCIONARIO CON LA KLAVE PARA CIFRAR
 klave = input("Introduce klave: ")
 var_klave_dic = procesa_klave(klave)
 
-# PARTE 2 - INTRODUCIMOS FRASE A CIFRAR
+# PARTE 3 - INTRODUCIMOS FRASE A CIFRAR
 frase_cifrar = input("Introduce frase para cifrar: ")
 mensaje_cifrado = procesa_frase(frase_cifrar)
 
-# PARTE 3 - DESCIFRAMOS MENSAJE
+# PARTE 4 - DESCIFRAMOS MENSAJE
 mensaje = descifrar_codigo(mensaje_cifrado)
 
-# PARTE 4 - MOSTRAMOS MENSAJE CIFRADO Y DESCIFRADO
+# PARTE 5 - MOSTRAMOS MENSAJE CIFRADO Y DESCIFRADO
 os.system('cls||clear')
 print("Mensaje cifrado:     ", mensaje_cifrado)
 print("Mensaje descifrado:  ", mensaje)
