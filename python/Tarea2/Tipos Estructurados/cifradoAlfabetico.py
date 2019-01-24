@@ -36,7 +36,7 @@ def tablero_klave(var_klave):
 
     var_klave_list_len = len(var_klave_list)
     var_klave_len = len(var_klave)
-    var_set_klave = set(var_klave)
+    #var_set_klave = set(var_klave)
 
     for i in range(0, var_klave_len):
         key = var_klave_list[i]
@@ -65,4 +65,3 @@ klave = input("Introduce klave: ")
 var_klave_dic = tablero_klave(klave)
 
 print(var_klave_dic)
-
