@@ -1,0 +1,9 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.unitTest.pyTestArgs": [
+        "Tarea2"
+    ],
+    "python.unitTest.unittestEnabled": false,
+    "python.unitTest.nosetestsEnabled": false,
+    "python.unitTest.pyTestEnabled": true
+}
