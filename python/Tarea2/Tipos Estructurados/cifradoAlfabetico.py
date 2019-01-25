@@ -35,7 +35,7 @@ función elimina_tildes del módulo mod_u05
 ● Antes de cifrar/descifrar debes comprobar que se ha inicializado la tabla de cifrado
 según la clave proporcionada
 '''
-import sys, os
+import sys, os, time, msvcrt
 from t02_05_mod import elimina_tildes
 
 def genera_dic(var_klave):
@@ -97,7 +97,7 @@ def procesa_klave(klave):
     klave = elimina_tildes(klave)
     klave = klave.upper()
     var_klave_dic = genera_dic(klave)
-    return var_klave_dic
+    return var_klave_dic, klave
 
 def procesa_frase(frase_cifrar):
     frase_cifrar = elimina_tildes(frase_cifrar)
@@ -118,7 +118,6 @@ def pintar_menu():
     opcion = input("\n> OPCION: ")
     opcion = elimina_tildes(opcion)
     opcion = opcion.upper()
-    print("Dentro del menu tengo:", opcion)
     return opcion
 
 # PARTE 1 - MENU
@@ -126,39 +125,74 @@ count = 0
 os.system('cls||clear')
 opcion = pintar_menu()
 
-#################################### REVISAR AQUI
-while (count < 2):
-    if (opcion != "C" or opcion != "D" or opcion != "K" or opcion != "M" or opcion != "S"):
-        print("La opcion introducida no es valida")
+condicion = True
+dic_menu = {'C':'Cifrar', 'D':'Descifrar',  'K':'Establecer clave',  'M':'Mostrar clave',  'S':'Salir'}
+while condicion:
+    try:
+        condicion = False
+    except KeyError:
+        print('La opcion introducida no es valida')
+        print("Presione una tecla para continuar...")
+        msvcrt.getch()
+        os.system('cls||clear')
         opcion = pintar_menu()
-        count += 1
-    elif (opcion == "C"):
-        print("Cifrar")
+        condicion = True
+
+while True:
+    if (opcion == "C"):
+        try:
+            type(var_klave_dic)
+            frase_cifrar = input("Introduce frase para cifrar: ")
+            mensaje_cifrado = procesa_frase(frase_cifrar)
+            os.system('cls||clear')
+            opcion = pintar_menu()
+        except NameError:
+            print('Debes inicializar la "Klave"')
+            print("Presione una tecla para continuar...")
+            msvcrt.getch()
+            os.system('cls||clear')
+            opcion = pintar_menu()
+
     elif (opcion == "D"):
-        print("Descifrar")
+        try:
+            type(var_klave_dic)
+            mensaje = descifrar_codigo(mensaje_cifrado)
+            print("Mensaje cifrado:     ", mensaje_cifrado)
+            print("Mensaje descifrado:  ", mensaje)
+            print("Presione una tecla para continuar...")
+            msvcrt.getch()
+            os.system('cls||clear')
+            opcion = pintar_menu()
+        except NameError:
+            print('Debes inicializar la "Klave"')
+            print("Presione una tecla para continuar...")
+            msvcrt.getch()
+            os.system('cls||clear')
+            opcion = pintar_menu()
+
     elif (opcion == "K"):
-        print("Establecer clave")
+        klave = input("Introduce klave: ")
+        var_klave_dic, klave = procesa_klave(klave)
+        os.system('cls||clear')
+        opcion = pintar_menu()
+
     elif (opcion == "M"):
-        print("Mostrar clave")
+        try:
+            type(var_klave_dic)
+            os.system('cls||clear')
+            print("Mostrar clave")
+            print(klave, "\n")
+            print("Presione una tecla para continuar...")
+            msvcrt.getch()
+            os.system('cls||clear')
+            opcion = pintar_menu()
+        except NameError:
+            print('Debes inicializar la "Klave"')
+            print("Presione una tecla para continuar...")
+            msvcrt.getch()
+            os.system('cls||clear')
+            opcion = pintar_menu()
+
     elif (opcion == "S"):
         print("Salir")
         sys.exit()
-else:
-    os.system('cls||clear')
-    sys.exit()
-
-# PARTE 2 - GENERAMOS EL DICCIONARIO CON LA KLAVE PARA CIFRAR
-klave = input("Introduce klave: ")
-var_klave_dic = procesa_klave(klave)
-
-# PARTE 3 - INTRODUCIMOS FRASE A CIFRAR
-frase_cifrar = input("Introduce frase para cifrar: ")
-mensaje_cifrado = procesa_frase(frase_cifrar)
-
-# PARTE 4 - DESCIFRAMOS MENSAJE
-mensaje = descifrar_codigo(mensaje_cifrado)
-
-# PARTE 5 - MOSTRAMOS MENSAJE CIFRADO Y DESCIFRADO
-os.system('cls||clear')
-print("Mensaje cifrado:     ", mensaje_cifrado)
-print("Mensaje descifrado:  ", mensaje)
