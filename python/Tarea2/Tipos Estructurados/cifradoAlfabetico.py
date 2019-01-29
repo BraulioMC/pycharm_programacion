@@ -35,7 +35,7 @@ función elimina_tildes del módulo mod_u05
 ● Antes de cifrar/descifrar debes comprobar que se ha inicializado la tabla de cifrado
 según la clave proporcionada
 '''
-import sys, os, time, msvcrt
+import sys, os, time, msvcrt # msvcrt sirve para pedir al usuario pulsar una teclar para continuar
 from t02_05_mod import elimina_tildes
 
 def genera_dic(var_klave):
@@ -120,13 +120,12 @@ def pintar_menu():
     opcion = opcion.upper()
     return opcion
 
-# PARTE 1 - MENU
+# PARTE 1 - PINTAR MENU
 count = 0
 os.system('cls||clear')
 opcion = pintar_menu()
-
-condicion = True
 dic_menu = {'C':'Cifrar', 'D':'Descifrar',  'K':'Establecer clave',  'M':'Mostrar clave',  'S':'Salir'}
+'''
 while condicion:
     try:
         condicion = False
@@ -137,7 +136,7 @@ while condicion:
         os.system('cls||clear')
         opcion = pintar_menu()
         condicion = True
-
+'''
 while True:
     if (opcion == "C"):
         try:
@@ -147,7 +146,7 @@ while True:
             os.system('cls||clear')
             opcion = pintar_menu()
         except NameError:
-            print('Debes inicializar la "Klave"')
+            print('No se ha introducido la clave de cifrado')
             print("Presione una tecla para continuar...")
             msvcrt.getch()
             os.system('cls||clear')
@@ -180,9 +179,14 @@ while True:
         try:
             type(var_klave_dic)
             os.system('cls||clear')
-            print("Mostrar clave")
-            print(klave, "\n")
-            print("Presione una tecla para continuar...")
+            
+            for i in var_klave_dic.keys():
+                print(i, end=' ')
+            print()
+            for i in var_klave_dic.values():
+                print(i, end=' ')
+            
+            print("\n\nPresione una tecla para continuar...")
             msvcrt.getch()
             os.system('cls||clear')
             opcion = pintar_menu()
@@ -196,3 +200,11 @@ while True:
     elif (opcion == "S"):
         print("Salir")
         sys.exit()
+    
+    else:
+        os.system('cls||clear')
+        print('La opcion introducida no es valida')
+        print("Presione una tecla para continuar...")
+        msvcrt.getch()
+        os.system('cls||clear')
+        opcion = pintar_menu()
