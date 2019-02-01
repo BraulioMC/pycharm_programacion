@@ -1,5 +1,5 @@
 '''
-Crea un programa para gestionar una agenda de contactos. El programa contará con un
+Crea un programa para gestionar una agenda de json_body. El programa contará con un
 menú con las siguientes opciones:
 
 ● N - Nuevo contacto: solicitará los datos de un nuevo contacto. Los datos estarán
@@ -14,7 +14,7 @@ formados por:
 ● A - Añadir tlf/e-mail/dir: nos permitirá añadir nuevos métodos de contacto en una
 entrada de la agenda
 
-● M - Mostra agenda: listará los contactos (y sus datos) de la agenda ordenado
+● M - Mostra agenda: listará los json_body (y sus datos) de la agenda ordenado
 alfabéticamente
 
 ● B - Buscar contacto: permitirá buscar los datos de un contacto a través de su nick
@@ -38,9 +38,10 @@ Ten en cuenta que:
     ● Ten en cuenta que, las búsquedas por clave en el diccionario, cuando esta clave no
     existe, generan errores que deberías evitar o controlar
 '''
-import os
+import os, json
 
-def pintar_menu():
+def draw_menu():
+    os.system('cls||clear')
     menu = (
         "########## MENU ##########\n"
         "N - Nuevo contacto\n"
@@ -53,6 +54,68 @@ def pintar_menu():
     )
     return menu
 
+def new_contact():
+    nick = input("NICK: ")
+    nombre = input("NOMBRE: ")
+    contacto = []
+    while True:
+        try:
+            add_contact = input("CONTACTO: ")
+            if len(add_contact) != 0:
+                contacto.append(add_contact)
+            else:
+                break
+        except KeyboardInterrupt:
+            os.system('cls||clear')
+            break
+    
+    # json_body = []
+    # json_body.append(
+    #     {
+    #         'NICK':nick,
+    #         'NOMBRE':nombre,
+    #         'CONTACTO':contacto
+    #     }
+    # )
+    # with open('data.json', 'w') as outfile:
+    #     json.dump(json_body, outfile)
+    data = {}
+    data['NICK'] = nick
+    data['NOMBRE'] = nombre
+    data['CONTACTO'] = contacto
+    with open('data.json', 'w') as outfile:
+        json.dump(json.dumps(data), outfile)
+    
 
-os.system('cls||clear')
-print(pintar_menu())
+def select_option():
+    print(draw_menu())
+    varOption = input('Introduce una opcion: ')
+    varOption = varOption.upper()
+
+    if varOption == "N":
+        os.system('cls||clear')
+        print("Nuevo contacto")
+        new_contact()
+
+    elif varOption == "E":
+        print("opcion E")
+    elif varOption == "A":
+        print("opcion A")
+    elif varOption == "M":
+        print("opcion M")
+    elif varOption == "B":
+        print("opcion B")
+    elif varOption == "G":
+        print("opcion G")
+    elif varOption == "S":
+        os.system('cls||clear')
+        print("Bye!")
+        exit()
+    else:
+        os.system('cls||clear')
+        print("La opcion introducida no es valida")
+        exit()
+
+
+while True:
+    print(select_option())
