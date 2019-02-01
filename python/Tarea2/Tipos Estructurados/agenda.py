@@ -55,6 +55,7 @@ def draw_menu():
     return menu
 
 def new_contact():
+    path = "F:\\braulio.mosquera\\Documents\\DAW\\pycharm_programacion\\python\\Tarea2\\Tipos Estructurados\\agenda.json"
     nick = input("NICK: ")
     nombre = input("NOMBRE: ")
     contacto = []
@@ -69,21 +70,11 @@ def new_contact():
             os.system('cls||clear')
             break
     
-    # json_body = []
-    # json_body.append(
-    #     {
-    #         'NICK':nick,
-    #         'NOMBRE':nombre,
-    #         'CONTACTO':contacto
-    #     }
-    # )
-    # with open('data.json', 'w') as outfile:
-    #     json.dump(json_body, outfile)
     data = {}
     data['NICK'] = nick
     data['NOMBRE'] = nombre
     data['CONTACTO'] = contacto
-    with open('data.json', 'w') as outfile:
+    with open(path, 'w') as outfile:
         json.dump(json.dumps(data), outfile)
     
 

@@ -1,6 +1,1 @@
-{
-    "NICK":{
-        "NOMBRE":"none",
-        "METODOS":["none","none"]
-    }
-}
+"{\"NICK\": \"nick\", \"NOMBRE\": \"nombre\", \"CONTACTO\": [\"contacto1\", \"contacto2\"]}"
