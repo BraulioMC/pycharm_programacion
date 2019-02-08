@@ -74,6 +74,7 @@ def new_contact():
     data['NICK'] = nick
     data['NOMBRE'] = nombre
     data['CONTACTO'] = contacto
+    print(data)
     with open(path, 'w') as outfile:
         json.dump(json.dumps(data), outfile)
     
