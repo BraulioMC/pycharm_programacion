@@ -55,7 +55,7 @@ def draw_menu():
     return menu
 
 def new_contact():
-    path = "F:\\braulio.mosquera\\Documents\\DAW\\pycharm_programacion\\python\\Tarea2\\Tipos Estructurados\\agenda.json"
+    path = "F:\\braulio.mosquera\\Documents\\DAW\\pycharm_programacion\\python\\Tarea2\\Tipos Estructurados\\agenda\\agenda.json"
     nick = input("NICK: ")
     nombre = input("NOMBRE: ")
     contacto = []

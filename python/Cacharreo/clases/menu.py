@@ -24,7 +24,7 @@ class Alumnos:
             nom=input("Ingrese nombre del alumno:")
             self.nombres.append(nom)
             no=int(input("Nota del alumno:"))
-            self.notas.append(no)
+            self.notas.append(no) 
 
     def listar(self):
         print("Listado completo de alumnos")
