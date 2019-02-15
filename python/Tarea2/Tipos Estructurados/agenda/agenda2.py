@@ -13,9 +13,9 @@ if __name__ == "__main__":
     dic=mod_u05.load_dict_json(path)
 
     # Añadir contacto nuevo
-    dic2 = mod_u05.select_option(dic)
+    while True:
+        dic2 = mod_u05.select_option(dic, path)
+        dic = dic2
 
     # Escribir dic en json
-    mod_u05.write_dict_json(dic2, path)
-
-
+    # mod_u05.write_dict_json(dic, path)

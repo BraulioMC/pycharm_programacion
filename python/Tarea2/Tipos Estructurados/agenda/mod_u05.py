@@ -2,6 +2,8 @@ import json
 import pickle
 import os
 import platform
+import time
+import msvcrt
 
 
 def clear_screen():
@@ -244,7 +246,7 @@ def draw_menu():
     )
     return menu
 
-def select_option(dic):
+def select_option(dic, path):
     print(draw_menu())
     varOption = input('Introduce una opcion: ')
     varOption = varOption.upper()
@@ -275,7 +277,9 @@ def select_option(dic):
         buscar_contacto(dic)
 
     elif varOption == "G":
-        print("opcion G")
+        print("Guardar agenda")
+        guarda_agenda(dic, path)
+    
     elif varOption == "S":
         os.system('cls||clear')
         print("Bye!")
@@ -315,7 +319,12 @@ def muestra_agenda(dic):
     for key in keylist:
         print("Nick: {} - Contacto: {}".format(key, dic[key]))
 
+    print("Presione una tecla para continuar...")
+    msvcrt.getch()
+
 def buscar_contacto(dic):
     nick = input("Indica Nick: ")
     print(dic[nick])
 
+def guarda_agenda(dic, path):
+    write_dict_json(dic, path)
