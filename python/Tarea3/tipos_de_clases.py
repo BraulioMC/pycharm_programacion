@@ -4,10 +4,10 @@ class Odd:
         self.x = x
     
     def getX(self):
-        return x
+        return self.x
     
     def getY(self):
-        return y
+        return self.y
 
 class Wild(object):
     def __init__(self, x, y):
