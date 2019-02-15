@@ -12,10 +12,7 @@ if __name__ == "__main__":
     mod_u05.clear_screen()
     dic=mod_u05.load_dict_json(path)
 
-    # Añadir contacto nuevo
+    # Mostrar menu
     while True:
         dic2 = mod_u05.select_option(dic, path)
         dic = dic2
-
-    # Escribir dic en json
-    # mod_u05.write_dict_json(dic, path)
