@@ -1,7 +1,7 @@
 import mod_u05
 import os
 
-path = (os.path.dirname(os.path.abspath(__file__)) + "\\agenda2.json")
+path = (os.path.dirname(os.path.abspath(__file__)) + "\\agenda.json")
 
 if not os.path.exists(path):
     f = open(path, "w+")
