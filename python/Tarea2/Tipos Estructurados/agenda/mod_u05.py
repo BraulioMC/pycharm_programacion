@@ -255,13 +255,20 @@ def select_option(dic):
         dic = new_contact(dic)
 
     elif varOption == "E":
+        os.system('cls||clear')
         print("Elimina nick")
         dic = elimina_nick(dic)
+
     elif varOption == "A":
+        os.system('cls||clear')
         print("Añade contactos")
         dic = añade_contactos(dic)
+
     elif varOption == "M":
-        print("opcion M")
+        os.system('cls||clear')
+        print("Mostrar agenda")
+        muestra_agenda(dic)
+
     elif varOption == "B":
         print("opcion B")
     elif varOption == "G":
@@ -297,3 +304,10 @@ def añade_contactos(dic):
             break
     
     return dic
+
+def muestra_agenda(dic):
+    keylist = dic.keys()
+    sorted(keylist)
+    
+    for key in keylist:
+        print("Nick: {} - Contacto: {}".format(key, dic[key]))
