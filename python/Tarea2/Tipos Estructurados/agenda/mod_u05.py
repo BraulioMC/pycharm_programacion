@@ -258,7 +258,8 @@ def select_option(dic):
         print("Elimina nick")
         dic = elimina_nick(dic)
     elif varOption == "A":
-        print("opcion A")
+        print("Añade contactos")
+        dic = añade_contactos(dic)
     elif varOption == "M":
         print("opcion M")
     elif varOption == "B":
@@ -279,4 +280,20 @@ def select_option(dic):
 def elimina_nick(dic):
     nick = input('Indica nick: ')
     dic.pop(nick)
+    return dic
+
+def añade_contactos(dic):
+    nick = input("Indica Nick: ")
+    while True:
+        try:
+            add_contact = input("CONTACTO: ")
+            if len(add_contact) != 0:
+                dic[nick][1].append(add_contact)
+            else:
+                break
+
+        except KeyboardInterrupt:
+            os.system('cls||clear')
+            break
+    
     return dic

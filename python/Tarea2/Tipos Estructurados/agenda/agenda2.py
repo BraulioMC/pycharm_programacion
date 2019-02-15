@@ -18,4 +18,4 @@ if __name__ == "__main__":
     # Escribir dic en json
     mod_u05.write_dict_json(dic2, path)
 
-    
+
