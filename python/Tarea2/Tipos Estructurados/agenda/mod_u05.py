@@ -270,7 +270,10 @@ def select_option(dic):
         muestra_agenda(dic)
 
     elif varOption == "B":
-        print("opcion B")
+        os.system('cls||clear')
+        print("Buscar contacto")
+        buscar_contacto(dic)
+
     elif varOption == "G":
         print("opcion G")
     elif varOption == "S":
@@ -311,3 +314,8 @@ def muestra_agenda(dic):
     
     for key in keylist:
         print("Nick: {} - Contacto: {}".format(key, dic[key]))
+
+def buscar_contacto(dic):
+    nick = input("Indica Nick: ")
+    print(dic[nick])
+
