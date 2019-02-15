@@ -206,8 +206,8 @@ def get_hang_pic():
       ━━━━━━━┻
     """)
 
-def new_contact():
-    dic = {}
+def new_contact(dic1):
+    dic2 = {}
     nick = input("NICK: ")
     nombre = [input("NOMBRE: ")]
     contacto = []
@@ -224,9 +224,11 @@ def new_contact():
             break
     
     nombre.append(contacto)
-    dic[nick] = nombre
+    dic2[nick] = nombre
 
-    return dic
+    dic1.update(dic2)
+
+    return dic1
 
 def draw_menu():
     os.system('cls||clear')
@@ -242,7 +244,7 @@ def draw_menu():
     )
     return menu
 
-def select_option():
+def select_option(dic):
     print(draw_menu())
     varOption = input('Introduce una opcion: ')
     varOption = varOption.upper()
@@ -250,10 +252,11 @@ def select_option():
     if varOption == "N":
         os.system('cls||clear')
         print("Nuevo contacto")
-        dic = new_contact()
+        dic = new_contact(dic)
 
     elif varOption == "E":
-        print("opcion E")
+        print("Elimina nick")
+        dic = elimina_nick(dic)
     elif varOption == "A":
         print("opcion A")
     elif varOption == "M":
@@ -271,4 +274,9 @@ def select_option():
         print("La opcion introducida no es valida")
         exit()
 
+    return dic
+
+def elimina_nick(dic):
+    nick = input('Indica nick: ')
+    dic.pop(nick)
     return dic

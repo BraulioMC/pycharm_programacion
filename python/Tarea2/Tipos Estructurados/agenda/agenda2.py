@@ -7,18 +7,15 @@ if not os.path.exists(path):
     f = open(path, "w+")
     f.write('{}')
 
+if __name__ == "__main__":
+    # Preparar diccionario
+    mod_u05.clear_screen()
+    dic=mod_u05.load_dict_json(path)
 
-# Parte 0 - Pintar menu
+    # Añadir contacto nuevo
+    dic2 = mod_u05.select_option(dic)
 
-# mod_u05.select_option()
+    # Escribir dic en json
+    mod_u05.write_dict_json(dic2, path)
 
-# Parte 1 - Preparar diccionario
-mod_u05.clear_screen()
-dic=mod_u05.load_dict_json(path)
-
-dic2 = mod_u05.select_option()
-dic.update(dic2)
-
-# Parte 2 - Escribir dic en json
-mod_u05.write_dict_json(dic, path)
-
+    
