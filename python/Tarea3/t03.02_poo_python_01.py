@@ -22,21 +22,31 @@ class intSet():
                 print('No encontrado: ', e)
 
     def copy(self):
-        copia = str(self.value[:])
+        copia = str(self.value)
         return copia
+    
+    def get_set(self):
+        return tuple(sorted(self.value))
 
     def __str__(self):
         return str(self.value)
 
 
-lista_set = intSet()
-print(lista_set)
+# Crea instancia de la clase intSet
+list_numeros = intSet()
+print(list_numeros)
 
+# Inserta numeros
+list_numeros.insert(55, -99, 0, 1)
+print(list_numeros)
 
-lista_set.insert(55, -99, 0, 1)
-print(lista_set)
+# Borra un numero
+list_numeros.delete(55, 60, 1)
+print(list_numeros)
 
-lista_set.delete(55, 60, 1)
-print(lista_set)
+# Copia
+print("Copia -> ", list_numeros.copy())
 
-print(lista_set.copy)
+# Tupla ordenada
+print(list_numeros.get_set())
+
