@@ -9,7 +9,6 @@ connection = pymysql.connect(host='localhost',
                 cursorclass=pymysql.cursors.DictCursor)
 
 def registerUser(user, password):
-    print(password)
     try:
         with connection.cursor() as cursor:
             sql = "SELECT `user`, `password` FROM `login` WHERE `user` = %s and `password` = %s"
