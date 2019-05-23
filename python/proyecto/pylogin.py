@@ -1,3 +1,5 @@
+import hashlib
+
 from tkinter import *
 from tkinter import messagebox
 from db import loginDB, registerUser, closeDB
@@ -8,7 +10,10 @@ clr='#004a95'
 
 def login():
 
-    access = loginDB(user_Entry.get(), password_Entry.get())
+    seed = password_Entry.get()
+    h = hashlib.sha256(seed.encode())
+
+    access = loginDB(user_Entry.get(), h.hexdigest())
 
     if access:
         messagebox.showinfo('Login', 'Login correcto!')
@@ -17,7 +22,11 @@ def login():
         warn.config(text="Invalid username or Password",fg="red")
 
 def register():
-    check = registerUser(user_Entry.get(),password_Entry.get())
+
+    seed = password_Entry.get()
+    h = hashlib.sha256(seed.encode())
+
+    check = registerUser(user_Entry.get(), h.hexdigest())
 
     if check:
         messagebox.showinfo('Registro', 'Registro efectuado')
