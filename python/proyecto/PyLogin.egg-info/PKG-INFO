@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: PyLogin
+Version: 0.1
+Summary: This is an Project Package
+Home-page: http://example.com/
+Author: Braulio
+Author-email: A18BraulioMC@iessanclemente.net
+License: PSF
+Description: UNKNOWN
+Keywords: login window with db connect
+Platform: UNKNOWN
