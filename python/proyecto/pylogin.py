@@ -10,11 +10,13 @@ __CLR='#004a95'
 __FGCOLOR='white'
 __GEOMETRY="420x400"
 __TITLE="Login GUI"
-__FONT_PASS=("blod",15)
+__FONT_PASS=("blod",14)
 __WIDTH=40
 __FONT=10
 __LABEL_X=20
-__LABEL_Y=40
+__LABEL_Y=50
+__LABEL_PASS_X=20
+__LABEL_PASS_Y=130
 __USER_X=20
 __USER_Y=80
 __PASS_X=20
@@ -59,7 +61,7 @@ w=Tk()
 w.title(__TITLE)
 w.geometry(__GEOMETRY)
 w.config(bg=__BGCLR)
-w.resizable()
+w.resizable(False, False)
 
 user=Label(w,
             text="User",
@@ -84,7 +86,7 @@ password=Label(w,
             font=(__FONT_PASS),
             bg=__BGCLR,
             fg=__FGCLR)
-password.place(x=__PASS_X,y=__PASS_Y)
+password.place(x=__LABEL_PASS_X,y=__LABEL_PASS_Y)
 
 password_Entry=Entry(w,bg=__BGCLR,
             fg=__FGCOLOR,
