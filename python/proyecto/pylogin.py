@@ -1,6 +1,6 @@
 import hashlib
 
-from tkinter import *
+from tkinter import Tk, Label, Entry, GROOVE, Button
 from tkinter import messagebox
 from db import loginDB, registerUser, closeDB
 
