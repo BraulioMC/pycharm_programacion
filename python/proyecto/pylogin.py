@@ -41,9 +41,12 @@ def login():
 
     if access:
         messagebox.showinfo('Login', 'Login correcto!')
-        w.destroy()
+        user_Entry.delete(0, 'end')
+        password_Entry.delete(0, 'end')
     else:
         warn.config(text="Invalid username or Password",fg="red")
+        user_Entry.delete(0, 'end')
+        password_Entry.delete(0, 'end')
 
 def register():
 
@@ -54,8 +57,12 @@ def register():
 
     if check:
         messagebox.showinfo('Registro', 'Registro efectuado')
+        user_Entry.delete(0, 'end')
+        password_Entry.delete(0, 'end')
     else:
         messagebox.showinfo('Registro', 'El usuario ya existe')
+        user_Entry.delete(0, 'end')
+        password_Entry.delete(0, 'end')
 
 w=Tk()
 w.title(__TITLE)
