@@ -3,7 +3,7 @@ setup(
     name="PyLogin",
     version="0.1",
     packages=find_packages(),
-    scripts=['pylogin.py', 'db.py'],
+    # scripts=['pylogin.py', 'db.py'],
 
     # Project uses reStructuredText, so ensure that the docutils get
     # installed or upgraded on the target machine
