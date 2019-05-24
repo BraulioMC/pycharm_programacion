@@ -43,6 +43,7 @@ def login():
         messagebox.showinfo('Login', 'Login correcto!')
         user_Entry.delete(0, 'end')
         password_Entry.delete(0, 'end')
+        w.destroy()
     else:
         warn.config(text="Invalid username or Password",fg="red")
         user_Entry.delete(0, 'end')

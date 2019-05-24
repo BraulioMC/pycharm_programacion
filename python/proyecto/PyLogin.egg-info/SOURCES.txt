@@ -1,3 +1,4 @@
+README.md
 setup.py
 PyLogin.egg-info/PKG-INFO
 PyLogin.egg-info/SOURCES.txt
